@@ -1,10 +1,14 @@
 package com.mycompany.practice;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -23,7 +27,7 @@ import com.mycompany.practice.databinding.ActivitySpinkitBinding;
 public class SpinkitActivity extends AppCompatActivity {
 
     ActivitySpinkitBinding binding;
-    ImageView imgPrevious, imgNext;
+    ImageView imgPrevious, imgNext, imgHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,15 @@ public class SpinkitActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SpinkitActivity.this, RecyclerViewActivity.class));
+                finish();
+            }
+        });
+
+        imgHome = findViewById(R.id.imgHome);
+        imgHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SpinkitActivity.this, FirstActivity.class));
                 finish();
             }
         });
@@ -68,5 +81,4 @@ public class SpinkitActivity extends AppCompatActivity {
         Sprite rotatingCircle = new RotatingCircle();
         binding.spinkitRotatingCircle.setIndeterminateDrawable(rotatingCircle);
     }
-
 }

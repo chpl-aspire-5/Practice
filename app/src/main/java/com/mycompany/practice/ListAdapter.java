@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListDataViewHolder> {
 
     Context context;
@@ -27,6 +29,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListDataViewHo
     @Override
     public void onBindViewHolder(@NonNull ListDataViewHolder holder, int position) {
         holder.txtNo.setText("" + (position + 1));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(holder.itemView, "" + (position + 1), Snackbar.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

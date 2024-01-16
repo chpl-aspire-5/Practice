@@ -14,7 +14,7 @@ import com.transferwise.sequencelayout.SequenceStep;
 
 public class VerticalStateProgressBarActivity extends AppCompatActivity {
 
-    ImageView imgPrevious, imgNext;
+    ImageView imgPrevious, imgNext, imgHome;
     SequenceStep step1, step2, step3, step4, step5;
     SequenceLayout lytSequence;
 
@@ -34,7 +34,23 @@ public class VerticalStateProgressBarActivity extends AppCompatActivity {
         });
 
         imgNext = findViewById(R.id.imgNext);
-        imgNext.setVisibility(View.GONE);
+
+        imgNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(VerticalStateProgressBarActivity.this, ShimmerActivity.class));
+                finish();
+            }
+        });
+
+        imgHome = findViewById(R.id.imgHome);
+        imgHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(VerticalStateProgressBarActivity.this, FirstActivity.class));
+                finish();
+            }
+        });
 
         lytSequence = findViewById(R.id.lytSequence);
         step1 = findViewById(R.id.step1);

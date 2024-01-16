@@ -20,7 +20,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     ActivityRecyclerViewBinding binding;
     ListAdapter listAdapter;
-    ImageView imgPrevious,imgNext;
+    ImageView imgPrevious,imgNext,imgHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,15 @@ public class RecyclerViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(RecyclerViewActivity.this, StateProgressBarActivity.class));
+                finish();
+            }
+        });
+
+        imgHome = findViewById(R.id.imgHome);
+        imgHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecyclerViewActivity.this, FirstActivity.class));
                 finish();
             }
         });
