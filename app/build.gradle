@@ -60,6 +60,8 @@ dependencies {
     //State Progress Bar
     implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
 
+    implementation 'com.github.transferwise:sequence-layout:1.2.0'
+
     //Binding
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4' // Or any compatible version
 }

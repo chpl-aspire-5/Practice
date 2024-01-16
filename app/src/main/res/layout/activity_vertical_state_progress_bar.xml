@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerticalStateProgressBarActivity">
+
+    <ImageView
+        android:id="@+id/imgPrevious"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentStart="true"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@drawable/box"
+        android:src="@drawable/baseline_previous_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.transferwise.sequencelayout.SequenceLayout
+        android:id="@+id/lytSequence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/imgPrevious">
+
+        <com.transferwise.sequencelayout.SequenceStep
+            android:id="@+id/step1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="First step" />
+
+        <com.transferwise.sequencelayout.SequenceStep
+            android:id="@+id/step2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Second step" />
+
+        <com.transferwise.sequencelayout.SequenceStep
+            android:id="@+id/step3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:active="true"
+            app:title="Third step" />
+
+        <com.transferwise.sequencelayout.SequenceStep
+            android:id="@+id/step4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Fourth step" />
+
+        <com.transferwise.sequencelayout.SequenceStep
+            android:id="@+id/step5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Fifth step" />
+
+    </com.transferwise.sequencelayout.SequenceLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

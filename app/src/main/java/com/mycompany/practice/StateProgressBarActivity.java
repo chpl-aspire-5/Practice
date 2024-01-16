@@ -14,7 +14,7 @@ public class StateProgressBarActivity extends AppCompatActivity {
 
     String[] descriptionData = {"Step One", "Step Two", "Step Three", "Step Four", "Step Five"};
     Button next, previous;
-    ImageView imgPrevious;
+    ImageView imgPrevious, imgNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +90,15 @@ public class StateProgressBarActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(StateProgressBarActivity.this, RecyclerViewActivity.class));
+                finish();
+            }
+        });
+
+        imgNext = findViewById(R.id.imgNext);
+        imgNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(StateProgressBarActivity.this, VerticalStateProgressBarActivity.class));
                 finish();
             }
         });
