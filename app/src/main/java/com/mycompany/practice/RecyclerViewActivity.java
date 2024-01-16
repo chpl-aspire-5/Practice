@@ -1,0 +1,58 @@
+package com.mycompany.practice;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+
+import com.mycompany.practice.databinding.ActivityRecyclerViewBinding;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class RecyclerViewActivity extends AppCompatActivity {
+
+    ActivityRecyclerViewBinding binding;
+    ListAdapter listAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view);
+
+        listAdapter = new ListAdapter(RecyclerViewActivity.this);
+
+        binding.imgPrevious.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecyclerViewActivity.this, SpinkitActivity.class));
+                finish();
+            }
+        });
+
+        binding.imgNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecyclerViewActivity.this, StateProgressBarActivity.class));
+                finish();
+            }
+        });
+
+        binding.recyclerViewList.setLayoutManager(new LinearLayoutManager(RecyclerViewActivity.this));
+        binding.recyclerViewList.setAdapter(listAdapter);
+
+        binding.swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                binding.swipeRefresh.setRefreshing(false);
+            }
+        });
+    }
+}
