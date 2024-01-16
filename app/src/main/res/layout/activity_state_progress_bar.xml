@@ -34,19 +34,28 @@
             android:id="@+id/next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/box"
-            android:text="NEXT"
-            android:layout_gravity="center"/>
+            android:text="NEXT" />
 
         <Button
             android:id="@+id/previous"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/box"
-            android:text="PREVIOUS"
-            android:layout_gravity="center"/>
+            android:text="PREVIOUS" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/box"
+            android:text="RESET" />
 
     </LinearLayout>
 

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +14,7 @@ import com.kofigyan.stateprogressbar.StateProgressBar;
 public class StateProgressBarActivity extends AppCompatActivity {
 
     String[] descriptionData = {"Step One", "Step Two", "Step Three", "Step Four", "Step Five"};
-    Button next, previous;
+    Button next, previous, reset;
     ImageView imgPrevious, imgNext;
 
     @Override
@@ -21,7 +22,7 @@ public class StateProgressBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_state_progress_bar);
 
-        StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.your_state_progress_bar_id);
+        StateProgressBar stateProgressBar = findViewById(R.id.your_state_progress_bar_id);
         stateProgressBar.setStateDescriptionData(descriptionData);
 
         next = findViewById(R.id.next);
@@ -52,6 +53,7 @@ public class StateProgressBarActivity extends AppCompatActivity {
                         next.setEnabled(false);
                         previous.setEnabled(false);
                         next.setText("Completed");
+                        reset.setVisibility(View.VISIBLE);
                         previous.setVisibility(View.GONE);
                         break;
                 }
@@ -84,6 +86,16 @@ public class StateProgressBarActivity extends AppCompatActivity {
             }
         });
 
+        reset = findViewById(R.id.reset);
+        reset.setVisibility(View.GONE);
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(StateProgressBarActivity.this, "StateProgressBar will be Set to 1", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         imgPrevious = findViewById(R.id.imgPrevious);
 
         imgPrevious.setOnClickListener(new View.OnClickListener() {
@@ -102,5 +114,6 @@ public class StateProgressBarActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 }
