@@ -1,20 +1,23 @@
 package com.mycompany.practice;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.transferwise.sequencelayout.SequenceLayout;
+import com.transferwise.sequencelayout.SequenceStep;
 
 public class VerticalStateProgressBarActivity extends AppCompatActivity {
 
     ImageView imgPrevious;
+    SequenceStep step1, step2, step3, step4, step5;
     SequenceLayout lytSequence;
+    int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,51 @@ public class VerticalStateProgressBarActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        lytSequence = findViewById(R.id.lytSequence);
+        step1 = findViewById(R.id.step1);
+        step2 = findViewById(R.id.step2);
+        step3 = findViewById(R.id.step3);
+        step4 = findViewById(R.id.step4);
+        step5 = findViewById(R.id.step5);
+
+        step3.setActive(true);
+
+        step1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                step1.setActive(true);
+            }
+        });
+
+        step2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                step2.setActive(true);
+            }
+        });
+
+        step3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                step3.setActive(true);
+            }
+        });
+
+        step4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                step4.setActive(true);
+            }
+        });
+
+        step5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                step5.setActive(true);
+            }
+        });
+
 
     }
 }
