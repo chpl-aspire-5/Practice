@@ -14,10 +14,9 @@ import com.transferwise.sequencelayout.SequenceStep;
 
 public class VerticalStateProgressBarActivity extends AppCompatActivity {
 
-    ImageView imgPrevious;
+    ImageView imgPrevious, imgNext;
     SequenceStep step1, step2, step3, step4, step5;
     SequenceLayout lytSequence;
-    int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +32,9 @@ public class VerticalStateProgressBarActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        imgNext = findViewById(R.id.imgNext);
+        imgNext.setVisibility(View.GONE);
 
         lytSequence = findViewById(R.id.lytSequence);
         step1 = findViewById(R.id.step1);

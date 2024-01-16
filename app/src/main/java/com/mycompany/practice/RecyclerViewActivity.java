@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 
 import com.mycompany.practice.databinding.ActivityRecyclerViewBinding;
 
@@ -19,6 +20,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     ActivityRecyclerViewBinding binding;
     ListAdapter listAdapter;
+    ImageView imgPrevious,imgNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         listAdapter = new ListAdapter(RecyclerViewActivity.this);
 
-        binding.imgPrevious.setOnClickListener(new View.OnClickListener() {
+        imgPrevious = findViewById(R.id.imgPrevious);
+
+        imgPrevious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(RecyclerViewActivity.this, SpinkitActivity.class));
@@ -36,7 +40,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
             }
         });
 
-        binding.imgNext.setOnClickListener(new View.OnClickListener() {
+        imgNext = findViewById(R.id.imgNext);
+
+        imgNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(RecyclerViewActivity.this, StateProgressBarActivity.class));

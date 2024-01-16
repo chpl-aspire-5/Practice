@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.github.ybq.android.spinkit.sprite.Sprite;
 import com.github.ybq.android.spinkit.style.CubeGrid;
@@ -22,6 +23,7 @@ import com.mycompany.practice.databinding.ActivitySpinkitBinding;
 public class SpinkitActivity extends AppCompatActivity {
 
     ActivitySpinkitBinding binding;
+    ImageView imgPrevious, imgNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +31,15 @@ public class SpinkitActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_spinkit);
 
-        binding.imgNext.setOnClickListener(new View.OnClickListener() {
+        imgPrevious = findViewById(R.id.imgPrevious);
+        imgPrevious.setVisibility(View.GONE);
+
+        imgNext = findViewById(R.id.imgNext);
+
+        imgNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SpinkitActivity.this,RecyclerViewActivity.class));
+                startActivity(new Intent(SpinkitActivity.this, RecyclerViewActivity.class));
                 finish();
             }
         });

@@ -7,69 +7,47 @@
     android:background="@color/white"
     tools:context=".StateProgressBarActivity">
 
-    <ImageView
-        android:id="@+id/imgPrevious"
-        android:layout_width="@dimen/_40sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_alignParentStart="true"
-        android:layout_marginVertical="@dimen/_5sdp"
-        android:background="@drawable/box"
-        android:src="@drawable/baseline_previous_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imgNext"
-        android:layout_width="@dimen/_40sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_marginVertical="@dimen/_5sdp"
-        android:background="@drawable/box"
-        android:src="@drawable/baseline_next_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.kofigyan.stateprogressbar.StateProgressBar
-        android:id="@+id/your_state_progress_bar_id"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgPrevious"
-        app:spb_animateToCurrentProgressState="true"
-        app:spb_checkStateCompleted="true"
-        app:spb_currentStateDescriptionColor="#009688"
-        app:spb_currentStateNumber="one"
-        app:spb_maxStateNumber="five"
-        app:spb_stateBackgroundColor="#BDBDBD"
-        app:spb_stateDescriptionColor="#808080"
-        app:spb_stateForegroundColor="#009688"
-        app:spb_stateNumberBackgroundColor="#808080"
-        app:spb_stateNumberForegroundColor="#eeeeee" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:background="@drawable/box"
-        android:text="NEXT"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/your_state_progress_bar_id" />
+        <include layout="@layout/toolbar" />
 
-    <Button
-        android:id="@+id/previous"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:background="@drawable/box"
-        android:text="PREVIOUS"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/next" />
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:id="@+id/your_state_progress_bar_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:spb_animateToCurrentProgressState="true"
+            app:spb_checkStateCompleted="true"
+            app:spb_currentStateDescriptionColor="#009688"
+            app:spb_currentStateNumber="one"
+            app:spb_maxStateNumber="five"
+            app:spb_stateBackgroundColor="#BDBDBD"
+            app:spb_stateDescriptionColor="#808080"
+            app:spb_stateForegroundColor="#009688"
+            app:spb_stateNumberBackgroundColor="#808080"
+            app:spb_stateNumberForegroundColor="#eeeeee" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/box"
+            android:text="NEXT"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/box"
+            android:text="PREVIOUS"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
