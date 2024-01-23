@@ -16,6 +16,7 @@ public class StateProgressBarActivity extends AppCompatActivity {
     String[] descriptionData = {"Step One", "Step Two", "Step Three", "Step Four", "Step Five"};
     Button next, previous, reset;
     ImageView imgPrevious, imgNext, imgHome;
+    boolean flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class StateProgressBarActivity extends AppCompatActivity {
                         break;
                     case 5:
                         stateProgressBar.setAllStatesCompleted(true);
+                        flag = true;
                         next.setEnabled(false);
                         previous.setEnabled(false);
                         next.setText("Completed");
@@ -87,12 +89,16 @@ public class StateProgressBarActivity extends AppCompatActivity {
         });
 
         reset = findViewById(R.id.reset);
-        reset.setVisibility(View.GONE);
 
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(StateProgressBarActivity.this, "StateProgressBar will be Set to 1", Toast.LENGTH_SHORT).show();
+                if(flag){
+                    Toast.makeText(StateProgressBarActivity.this, "You Have Completed All Steps.", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.ONE);
+                }
             }
         });
 
