@@ -67,6 +67,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.shimmer) {
             startActivity(new Intent(this, ShimmerActivity.class));
             finish();
+        } else if (id == R.id.currency) {
+            startActivity(new Intent(this, CurrencyConversion.class));
+            finish();
         }
 
         return true;
