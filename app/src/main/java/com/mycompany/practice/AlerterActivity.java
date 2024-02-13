@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 import com.mycompany.practice.databinding.ActivityAlerterBinding;
 import com.tapadoo.alerter.Alerter;
+import com.tapadoo.alerter.OnHideAlertListener;
+import com.tapadoo.alerter.OnShowAlertListener;
 
 public class AlerterActivity extends AppCompatActivity {
     ImageView imgPrevious, imgNext, imgHome;
@@ -63,7 +65,6 @@ public class AlerterActivity extends AppCompatActivity {
                                 // Alerter message was clicked
                             }
                         })
-
                         .setOnShowListener(new OnShowAlertListener() {
                             @Override
                             public void onShow() {
