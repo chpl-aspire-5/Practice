@@ -30,6 +30,15 @@ public class ShimmerActivity extends AppCompatActivity {
             }
         });
 
+        imgNext = findViewById(R.id.imgNext);
+        imgNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ShimmerActivity.this, CurrencyConversion.class));
+                finish();
+            }
+        });
+
         imgHome = findViewById(R.id.imgHome);
         imgHome.setOnClickListener(new View.OnClickListener() {
             @Override

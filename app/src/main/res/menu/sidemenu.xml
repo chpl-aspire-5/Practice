@@ -23,8 +23,21 @@
     <item
         android:id="@+id/shimmer"
         android:title="Shimmer Activity" />
+
     <item
         android:id="@+id/currency"
         android:title="Currency Conversion Activity" />
+
+    <item
+        android:id="@+id/random"
+        android:title="Random No. Generator" />
+
+    <item
+        android:id="@+id/dragAndDrop"
+        android:title="Drag And Drop Layout" />
+
+    <item
+        android:id="@+id/pip"
+        android:title="Picture in Picture Mode" />
 
 </menu>

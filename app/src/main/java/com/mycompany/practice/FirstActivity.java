@@ -70,6 +70,15 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.currency) {
             startActivity(new Intent(this, CurrencyConversion.class));
             finish();
+        } else if (id == R.id.random) {
+            startActivity(new Intent(this, RandomNoGeneratorActivity.class));
+            finish();
+        } else if (id == R.id.dragAndDrop) {
+            startActivity(new Intent(this, DragAndDropActivity.class));
+            finish();
+        }else if (id == R.id.pip) {
+            startActivity(new Intent(this, PipActivity.class));
+            finish();
         }
 
         return true;
