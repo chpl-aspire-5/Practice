@@ -40,4 +40,8 @@
         android:id="@+id/pip"
         android:title="Picture in Picture Mode" />
 
+    <item
+        android:id="@+id/alerter"
+        android:title="Alerter and BottomSheetDialogFragment" />
+
 </menu>

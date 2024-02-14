@@ -76,8 +76,11 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.dragAndDrop) {
             startActivity(new Intent(this, DragAndDropActivity.class));
             finish();
-        }else if (id == R.id.pip) {
+        } else if (id == R.id.pip) {
             startActivity(new Intent(this, PipActivity.class));
+            finish();
+        } else if (id == R.id.alerter) {
+            startActivity(new Intent(this, AlerterActivity.class));
             finish();
         }
 

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.mycompany.practice.databinding.ActivityAlerterBinding;
 import com.tapadoo.alerter.Alerter;
 import com.tapadoo.alerter.OnHideAlertListener;
@@ -78,8 +79,10 @@ public class AlerterActivity extends AppCompatActivity {
                                 // do something when
                                 // Alerter message hides
                             }
-                        })
-                        .show();
+                        }).show();
+
+                BottomSheetDialogFragment fragment = new com.mycompany.practice.BottomSheetDialogFragment();
+                fragment.show(getSupportFragmentManager(), "BottomSheetDialogFragment");
             }
         });
     }
