@@ -64,6 +64,9 @@ public class AlerterActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 // do something when
                                 // Alerter message was clicked
+
+                                // hide the indicator view
+                                binding.indicatorView.setVisibility(View.INVISIBLE);
                             }
                         })
                         .setOnShowListener(new OnShowAlertListener() {
@@ -78,11 +81,12 @@ public class AlerterActivity extends AppCompatActivity {
                             public void onHide() {
                                 // do something when
                                 // Alerter message hides
+
+                                BottomSheetDialogFragment fragment = new com.mycompany.practice.BottomSheetDialogFragment();
+                                fragment.show(getSupportFragmentManager(), "BottomSheetDialogFragment");
                             }
                         }).show();
 
-                BottomSheetDialogFragment fragment = new com.mycompany.practice.BottomSheetDialogFragment();
-                fragment.show(getSupportFragmentManager(), "BottomSheetDialogFragment");
             }
         });
     }
