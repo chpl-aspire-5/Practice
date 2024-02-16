@@ -44,4 +44,8 @@
         android:id="@+id/alerter"
         android:title="Alerter and BottomSheetDialogFragment" />
 
+    <item
+        android:id="@+id/chip"
+        android:title="ChipGroup and Chip - ChipView" />
+
 </menu>

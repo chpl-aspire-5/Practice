@@ -82,6 +82,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.alerter) {
             startActivity(new Intent(this, AlerterActivity.class));
             finish();
+        } else if (id == R.id.chip) {
+            startActivity(new Intent(this, ChipsActivity.class));
+            finish();
         }
 
         return true;

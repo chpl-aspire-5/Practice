@@ -40,8 +40,8 @@ public class AlerterActivity extends AppCompatActivity {
         imgNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(AlerterActivity.this, AlerterActivity.class));
-//                finish();
+                startActivity(new Intent(AlerterActivity.this, ChipsActivity.class));
+                finish();
             }
         });
 
@@ -57,7 +57,7 @@ public class AlerterActivity extends AppCompatActivity {
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Alerter.create(AlerterActivity.this).setTitle("Alerter Message").setText("Alert Text")
+                Alerter.create(AlerterActivity.this).setTitle("Alert Message").setText("Click On Alert to Stop Indicator")
                         .setIcon(R.drawable.home).setBackgroundColorRes(R.color.red).setDuration(3000)
                         .setOnClickListener(new View.OnClickListener() {
                             @Override
