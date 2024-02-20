@@ -45,8 +45,8 @@ public class TorchActivity extends AppCompatActivity {
         imgNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(TorchActivity.this, SpeechToTextActivity.class));
-//                finish();
+                startActivity(new Intent(TorchActivity.this, BankDetailsUsingIfscActivity.class));
+                finish();
             }
         });
 
