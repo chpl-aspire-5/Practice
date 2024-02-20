@@ -47,8 +47,8 @@ public class SpeechToTextActivity extends AppCompatActivity {
         imgNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(SpeechToTextActivity.this, SpeechToTextActivity.class));
-//                finish();
+                startActivity(new Intent(SpeechToTextActivity.this, TorchActivity.class));
+                finish();
             }
         });
 

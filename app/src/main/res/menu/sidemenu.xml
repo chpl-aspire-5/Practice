@@ -49,7 +49,11 @@
         android:title="ChipGroup and Chip - ChipView" />
 
     <item
-        android:id="@+id/SpeechToText"
+        android:id="@+id/speechToText"
         android:title="Speech To Text" />
+
+    <item
+        android:id="@+id/torch"
+        android:title="Torch" />
 
 </menu>
