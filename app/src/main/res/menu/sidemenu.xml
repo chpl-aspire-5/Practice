@@ -48,4 +48,8 @@
         android:id="@+id/chip"
         android:title="ChipGroup and Chip - ChipView" />
 
+    <item
+        android:id="@+id/SpeechToText"
+        android:title="Speech To Text" />
+
 </menu>

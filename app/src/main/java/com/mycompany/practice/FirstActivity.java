@@ -85,6 +85,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.chip) {
             startActivity(new Intent(this, ChipsActivity.class));
             finish();
+        } else if (id == R.id.SpeechToText) {
+            startActivity(new Intent(this, SpeechToTextActivity.class));
+            finish();
         }
 
         return true;

@@ -38,8 +38,8 @@ public class ChipsActivity extends AppCompatActivity {
         imgNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(ChipsActivity.this, ChipsActivity.class));
-//                finish();
+                startActivity(new Intent(ChipsActivity.this, SpeechToTextActivity.class));
+                finish();
             }
         });
 
