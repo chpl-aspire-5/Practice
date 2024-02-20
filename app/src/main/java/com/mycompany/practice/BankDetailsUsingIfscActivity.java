@@ -83,24 +83,23 @@ public class BankDetailsUsingIfscActivity extends AppCompatActivity {
     private void getDataFromIFSCCode(String ifscCode) {
 
         mRequestQueue.getCache().clear();
-        String url = "http://api.techm.co.in/api/v1/ifsc/" + ifscCode;
+        String url = "https://ifsc.razorpay.com/" + ifscCode;
         RequestQueue queue = Volley.newRequestQueue(BankDetailsUsingIfscActivity.this);
 
         JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    if (response.getString("status").equals("failed")) {
+                    if (response == null) {
                         binding.tvBankDetails.setText("Failed Response Invalid IFSC Code");
                     } else {
-                        JSONObject dataObj = response.getJSONObject("data");
-                        String state = dataObj.optString("STATE");
-                        String bankName = dataObj.optString("BANK");
-                        String branch = dataObj.optString("BRANCH");
-                        String address = dataObj.optString("ADDRESS");
-                        String contact = dataObj.optString("CONTACT");
-                        String micrcode = dataObj.optString("MICRCODE");
-                        String city = dataObj.optString("CITY");
+                        String state = response.optString("STATE");
+                        String bankName = response.optString("BANK");
+                        String branch = response.optString("BRANCH");
+                        String address = response.optString("ADDRESS");
+                        String contact = response.optString("CONTACT");
+                        String micrcode = response.optString("MICRCODE");
+                        String city = response.optString("CITY");
 
                         binding.tvBankDetails.setText("Bank Name : " + bankName
                                 + "\nBranch : " + branch
@@ -110,9 +109,9 @@ public class BankDetailsUsingIfscActivity extends AppCompatActivity {
                                 + "\nState : " + state
                                 + "\nContact : " + contact);
                     }
-                } catch (JSONException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
-                    binding.tvBankDetails.setText("Catch Invalid IFSC Code");
+                    binding.tvBankDetails.setText(e.toString());
                 }
             }
         }, new Response.ErrorListener() {
