@@ -30,7 +30,7 @@
             android:background="@drawable/border_black"
             android:inputType="textCapCharacters"
             android:hint="Enter IFSC Code"
-            android:paddingHorizontal="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
             android:textColor="@color/black"
             android:textSize="@dimen/_15ssp" />
 

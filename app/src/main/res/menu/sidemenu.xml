@@ -56,4 +56,8 @@
         android:id="@+id/torch"
         android:title="Torch" />
 
+    <item
+        android:id="@+id/ifscCode"
+        android:title="Bank Details using IFSC Code" />
+
 </menu>

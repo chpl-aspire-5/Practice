@@ -98,16 +98,16 @@ public class BankDetailsUsingIfscActivity extends AppCompatActivity {
                         String branch = response.optString("BRANCH");
                         String address = response.optString("ADDRESS");
                         String contact = response.optString("CONTACT");
-                        String micrcode = response.optString("MICRCODE");
+                        String micrcode = response.optString("MICR");
                         String city = response.optString("CITY");
 
                         binding.tvBankDetails.setText("Bank Name : " + bankName
-                                + "\nBranch : " + branch
-                                + "\nAddress : " + address
-                                + "\nMICR Code : " + micrcode
-                                + "\nCity : " + city
-                                + "\nState : " + state
-                                + "\nContact : " + contact);
+                                + "\n\nBranch : " + branch
+                                + "\n\nAddress : " + address
+                                + "\n\nMICR Code : " + micrcode
+                                + "\n\nCity : " + city
+                                + "\n\nState : " + state
+                                + "\n\nContact : " + contact);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
