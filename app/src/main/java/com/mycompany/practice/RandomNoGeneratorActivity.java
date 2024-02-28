@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.mycompany.practice.databinding.ActivityRandomNoGeneratorBinding;
 
 import java.util.Random;
@@ -52,6 +53,19 @@ public class RandomNoGeneratorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(RandomNoGeneratorActivity.this, FirstActivity.class));
                 finish();
+            }
+        });
+
+        Glide.with(RandomNoGeneratorActivity.this)
+                .load(R.drawable.photo)
+                .into(binding.imgRandomGenerator);
+
+        binding.imgRandomGenerator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImageViewFragment imageViewFragment = new ImageViewFragment(R.drawable.photo);
+                //NOT WORKING
+                imageViewFragment.show(getSupportFragmentManager(), "Image");
             }
         });
 

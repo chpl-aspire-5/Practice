@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Practice"
         tools:targetApi="31">
         <activity
+            android:name=".ImageViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".BankDetailsUsingIfscActivity"
             android:exported="false" />
         <activity
@@ -27,6 +30,9 @@
             android:exported="false" />
         <activity
             android:name=".ChipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ClickImageActivity"
             android:exported="false" />
         <activity
             android:name=".AlerterActivity"

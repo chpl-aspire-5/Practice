@@ -50,7 +50,7 @@ public class BankDetailsUsingIfscActivity extends AppCompatActivity {
         imgNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(BankDetailsUsingIfscActivity.this, SpeechToTextActivity.class));
+//                startActivity(new Intent(BankDetailsUsingIfscActivity.this, BankDetailsUsingIfscActivity.class));
 //                finish();
             }
         });
