@@ -76,8 +76,7 @@ public class RandomNoGeneratorActivity extends AppCompatActivity {
                 if (resRandom.length() == 4) {
                     binding.tvGeneratedNo.setText("" + resRandom);
                 } else {
-                    String resRandom1 = String.valueOf(rand.nextInt((9999 - 100) + 1) + 10);
-                    binding.tvGeneratedNo.setText("" + resRandom1);
+                    binding.tvGeneratedNo.performClick();
                 }
             }
         });
