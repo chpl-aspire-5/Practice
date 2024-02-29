@@ -17,8 +17,9 @@
         android:theme="@style/Theme.Practice"
         tools:targetApi="31">
         <activity
-            android:name=".ImageViewActivity"
-            android:exported="false" />
+            android:name=".IntroSlider"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".BankDetailsUsingIfscActivity"
             android:exported="false" />
@@ -30,9 +31,6 @@
             android:exported="false" />
         <activity
             android:name=".ChipsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ClickImageActivity"
             android:exported="false" />
         <activity
             android:name=".AlerterActivity"
