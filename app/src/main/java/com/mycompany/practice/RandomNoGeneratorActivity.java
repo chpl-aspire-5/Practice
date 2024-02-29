@@ -57,14 +57,13 @@ public class RandomNoGeneratorActivity extends AppCompatActivity {
         });
 
         Glide.with(RandomNoGeneratorActivity.this)
-                .load(R.drawable.photo)
+                .load("https://devlaundry.chplgroup.org/img/user_profile/profile_81395970314.png")
                 .into(binding.imgRandomGenerator);
 
         binding.imgRandomGenerator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageViewFragment imageViewFragment = new ImageViewFragment(R.drawable.photo);
-                //NOT WORKING
+                ImageViewFragment imageViewFragment = new ImageViewFragment("https://devlaundry.chplgroup.org/img/user_profile/profile_81395970314.png");
                 imageViewFragment.show(getSupportFragmentManager(), "Image");
             }
         });
@@ -77,7 +76,8 @@ public class RandomNoGeneratorActivity extends AppCompatActivity {
                 if (resRandom.length() == 4) {
                     binding.tvGeneratedNo.setText("" + resRandom);
                 } else {
-                    Toast.makeText(RandomNoGeneratorActivity.this, "No. length was " + resRandom.length() + "\n Please Retry", Toast.LENGTH_SHORT).show();
+                    String resRandom1 = String.valueOf(rand.nextInt((9999 - 100) + 1) + 10);
+                    binding.tvGeneratedNo.setText("" + resRandom1);
                 }
             }
         });

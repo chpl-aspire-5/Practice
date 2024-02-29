@@ -69,7 +69,7 @@ public class ImageViewFragment extends DialogFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        if (url == null)
+        if (url != null)
             Glide.with(requireContext()).load(url).into(iv_post_img);
 
         imgBack.setOnClickListener(new View.OnClickListener() {
