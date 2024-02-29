@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.circulardialog.CDialog;
+import com.example.circulardialog.extras.CDConstants;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.mycompany.practice.databinding.ActivityAlerterBinding;
 import com.tapadoo.alerter.Alerter;
@@ -57,6 +59,16 @@ public class AlerterActivity extends AppCompatActivity {
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // Circular Dialog Box Created
+                new CDialog(AlerterActivity.this).createAlert("Great", CDConstants.SUCCESS,   // Type of dialog
+                                CDConstants.LARGE)     // Size of dialog
+                        .setAnimation(CDConstants.SLIDE_FROM_BOTTOM_TO_TOP)  // Animation for enter/exit
+                        .setDuration(2000)   // in milliseconds
+                        .setTextSize(CDConstants.LARGE_TEXT_SIZE)  // CDConstants.LARGE_TEXT_SIZE,
+                        // CDConstants.NORMAL_TEXT_SIZE
+                        .show();
+
                 Alerter.create(AlerterActivity.this).setTitle("Alert Message").setText("Click On Alert to Stop Indicator")
                         .setIcon(R.drawable.home).setBackgroundColorRes(R.color.red).setDuration(3000)
                         .setOnClickListener(new View.OnClickListener() {

@@ -94,6 +94,10 @@ dependencies {
     //https://github.com/sathishmepco/QR-Code-Generator-Android-App/blob/master/app/build.gradle
     //https://github.com/sathishmepco/QR-Code-Scanner-Android-App
 
+    //Circular Dialog
+    implementation 'com.github.hassanusman:CircularDialogs:1.2'
+
+
     //Alerter Message on Top
     implementation 'com.tapadoo.android:alerter:2.0.4'
 
