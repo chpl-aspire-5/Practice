@@ -100,6 +100,8 @@ dependencies {
     //Intro Slider
     implementation 'com.github.AppIntro:AppIntro:6.0.0'
 
+    implementation 'com.ebanx:swipe-button:0.4.0'
+
     //Alerter Message on Top
     implementation 'com.tapadoo.android:alerter:2.0.4'
 

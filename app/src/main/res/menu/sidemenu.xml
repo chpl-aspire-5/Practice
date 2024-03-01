@@ -60,4 +60,8 @@
         android:id="@+id/ifscCode"
         android:title="Bank Details using IFSC Code" />
 
+    <item
+        android:id="@+id/swipe"
+        android:title="Swipe To Perform" />
+
 </menu>

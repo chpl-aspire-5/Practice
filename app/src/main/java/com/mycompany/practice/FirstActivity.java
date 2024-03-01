@@ -94,6 +94,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.ifscCode) {
             startActivity(new Intent(this, BankDetailsUsingIfscActivity.class));
             finish();
+        }else if (id == R.id.swipe) {
+            startActivity(new Intent(this, SwipeButtonActivity.class));
+            finish();
         }
 
         return true;
