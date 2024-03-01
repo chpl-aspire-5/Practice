@@ -2,6 +2,7 @@ package com.mycompany.practice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -23,6 +24,8 @@ public class SwipeButtonActivity extends AppCompatActivity {
             @Override
             public void onStateChange(boolean active) {
                 Toast.makeText(SwipeButtonActivity.this, "Active", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SwipeButtonActivity.this, FirstActivity.class));
+                finish();
             }
         });
     }

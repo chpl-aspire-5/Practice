@@ -56,7 +56,7 @@ dependencies {
     implementation "com.github.ybq:Android-SpinKit:1.4.0"
 
     //Glide
-    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
 
     //SSP & SDP
     implementation 'com.intuit.ssp:ssp-android:1.1.0'
@@ -84,7 +84,7 @@ dependencies {
     implementation 'com.karumi:dexter:6.2.3'
 
     //HTTP library that makes networking for Android apps easier and most importantly, faster
-    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.android.volley:volley:1.2.1'
 
     //Drag And Drop Layout
     implementation 'com.jmedeisis:draglinearlayout:1.1.0'
@@ -100,7 +100,10 @@ dependencies {
     //Intro Slider
     implementation 'com.github.AppIntro:AppIntro:6.0.0'
 
+    //Swipe Button
     implementation 'com.ebanx:swipe-button:0.4.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     //Alerter Message on Top
     implementation 'com.tapadoo.android:alerter:2.0.4'
