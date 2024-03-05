@@ -41,11 +41,11 @@ public class BottomNavigationActivity extends AppCompatActivity {
         binding.navView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if(item.getItemId() == 0){
+                int itemId = item.getItemId();
+                if (itemId == R.id.navigation_home) {
                     fm.beginTransaction().hide(active).show(homeFragment).commit();
                     active = homeFragment;
-                }
-                else{
+                } else if (itemId == R.id.navigation_profile) {
                     fm.beginTransaction().hide(active).show(profileFragment).commit();
                     active = profileFragment;
                 }
