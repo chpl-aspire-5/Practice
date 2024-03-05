@@ -2,6 +2,7 @@ package com.mycompany.practice;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Context;
@@ -100,7 +101,30 @@ public class TorchActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton button = findViewById(checkedId);
-                Toast.makeText(TorchActivity.this, ""+button.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(TorchActivity.this, "" + button.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        binding.rbRazor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.llMain.setBackgroundColor(ContextCompat.getColor(TorchActivity.this, R.color.white));
+                binding.rbRazor.setTextColor(ContextCompat.getColor(TorchActivity.this, R.color.black));
+                binding.rbCash.setTextColor(ContextCompat.getColor(TorchActivity.this, R.color.black));
+                binding.toggleButton.setTextColor(ContextCompat.getColor(TorchActivity.this, R.color.white));
+                binding.toggleButton.setBackgroundColor(ContextCompat.getColor(TorchActivity.this, R.color.black));
+                Toast.makeText(TorchActivity.this, "Day Is CLicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+        binding.rbCash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.llMain.setBackgroundColor(ContextCompat.getColor(TorchActivity.this, R.color.black));
+                binding.rbRazor.setTextColor(ContextCompat.getColor(TorchActivity.this, R.color.white));
+                binding.rbCash.setTextColor(ContextCompat.getColor(TorchActivity.this, R.color.white));
+                binding.toggleButton.setTextColor(ContextCompat.getColor(TorchActivity.this, R.color.black));
+                binding.toggleButton.setBackgroundColor(ContextCompat.getColor(TorchActivity.this, R.color.white));
+                Toast.makeText(TorchActivity.this, "Night Is CLicked", Toast.LENGTH_SHORT).show();
             }
         });
     }
