@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.mycompany.practice.New.AddFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
         android:id="@+id/navigation_profile"
         android:name="com.mycompany.practice.New.ProfileFragment"
         android:label="profile"
