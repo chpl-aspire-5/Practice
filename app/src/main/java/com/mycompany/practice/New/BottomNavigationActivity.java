@@ -1,6 +1,5 @@
 package com.mycompany.practice.New;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -9,7 +8,6 @@ import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationBarView;
 import com.mycompany.practice.R;
@@ -52,18 +50,5 @@ public class BottomNavigationActivity extends AppCompatActivity {
                 return true;
             }
         });
-//        binding.navView.setOnItemSelectedListener(item -> {
-//            switch (item.getItemId()) {
-//                case navigation_home : {
-//                    fm.beginTransaction().hide(active).show(homeFragment).commit();
-//                    active = homeFragment;
-//                }
-//                case navigation_profile : {
-//                    fm.beginTransaction().hide(active).show(profileFragment).commit();
-//                    active = profileFragment;
-//                }
-//            }
-//            return true; // Return true to indicate that the item click has been handled
-//        });
     }
 }
