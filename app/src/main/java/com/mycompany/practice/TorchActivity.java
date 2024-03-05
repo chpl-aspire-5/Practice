@@ -12,8 +12,12 @@ import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.mycompany.practice.databinding.ActivityTorchBinding;
 
@@ -89,6 +93,14 @@ public class TorchActivity extends AppCompatActivity {
                 } catch (CameraAccessException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        binding.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton button = findViewById(checkedId);
+                Toast.makeText(TorchActivity.this, ""+button.getText(), Toast.LENGTH_SHORT).show();
             }
         });
     }
