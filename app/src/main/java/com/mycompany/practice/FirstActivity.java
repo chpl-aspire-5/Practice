@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.mycompany.practice.New.BottomNavigationActivity;
 
 public class FirstActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -94,8 +95,11 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.ifscCode) {
             startActivity(new Intent(this, BankDetailsUsingIfscActivity.class));
             finish();
-        }else if (id == R.id.swipe) {
+        } else if (id == R.id.swipe) {
             startActivity(new Intent(this, SwipeButtonActivity.class));
+            finish();
+        } else if (id == R.id.imp) {
+            startActivity(new Intent(this, BottomNavigationActivity.class));
             finish();
         }
 

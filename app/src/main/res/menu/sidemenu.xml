@@ -64,4 +64,8 @@
         android:id="@+id/swipe"
         android:title="Swipe To Perform" />
 
+    <item
+        android:id="@+id/imp"
+        android:title="Imp" />
+
 </menu>
