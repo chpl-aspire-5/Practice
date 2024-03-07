@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.mycompany.practice.New.BottomNavigationActivity;
+import com.mycompany.practice.new1.InventoryActivity;
 
 public class FirstActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -100,6 +101,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
             finish();
         } else if (id == R.id.imp) {
             startActivity(new Intent(this, BottomNavigationActivity.class));
+            finish();
+        }else if (id == R.id.imp1) {
+            startActivity(new Intent(this, InventoryActivity.class));
             finish();
         }
 

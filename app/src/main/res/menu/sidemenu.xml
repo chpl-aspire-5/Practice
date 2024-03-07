@@ -68,4 +68,8 @@
         android:id="@+id/imp"
         android:title="Imp" />
 
+    <item
+        android:id="@+id/imp1"
+        android:title="Inventory" />
+
 </menu>

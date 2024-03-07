@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Practice"
         tools:targetApi="31">
         <activity
+            android:name=".new1.InventoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".New.BottomNavigationActivity"
             android:exported="false" />
         <activity
