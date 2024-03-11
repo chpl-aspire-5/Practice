@@ -18,15 +18,28 @@
             app:tint="@color/black" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/_30sdp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toStartOf="@id/tvAddNewCategory"
             android:layout_toEndOf="@id/imgBack"
             android:gravity="center"
             android:text="Add New Product"
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAddNewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Add Category"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_10ssp" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
