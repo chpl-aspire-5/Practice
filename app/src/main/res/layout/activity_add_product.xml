@@ -28,61 +28,225 @@
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
 
-        <RelativeLayout
-            android:id="@+id/llProduct"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:layout_below="@id/imgBack"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/border_black"
-            android:padding="@dimen/_5sdp">
-
-            <ImageView
-                android:id="@+id/imgProduct"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/image_placeholder"
-                android:visibility="visible" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/corner_primary_border_fill_lite"
-                android:src="@drawable/baseline_add_24" />
-
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tvCategory"
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/llProduct"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="Category"
-            android:textSize="@dimen/_15ssp"
-            android:textStyle="bold" />
+            android:layout_below="@id/imgBack">
 
-        <LinearLayout
-            android:id="@+id/llSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvCategory"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:background="@drawable/border_black">
-
-            <Spinner
-                android:id="@+id/categorySpinner"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_5sdp" />
+                android:gravity="center"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/llProduct"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/border_black"
+                    android:padding="@dimen/_5sdp">
+
+                    <ImageView
+                        android:id="@+id/imgProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_placeholder"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/corner_primary_border_fill_lite"
+                        android:src="@drawable/baseline_add_24" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llProduct"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Category"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/llSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCategory"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_black">
+
+                    <Spinner
+                        android:id="@+id/categorySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llSpinner"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Name"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvProductName"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_black"
+                    android:hint="Product Name"
+                    android:inputType="textFilter|text"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_15ssp" />
+
+                <LinearLayout
+                    android:id="@+id/llPriceHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etProductName"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tvCostPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/llSpinner"
+                        android:layout_weight="1"
+                        android:text="Cost Name"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSellingPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/llSpinner"
+                        android:layout_weight="1"
+                        android:text="Selling Name"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPrices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llPriceHead"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <EditText
+                        android:id="@+id/etCostPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvProductName"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_black"
+                        android:hint="Cost Price"
+                        android:inputType="number"
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <EditText
+                        android:id="@+id/etSellingPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvProductName"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_black"
+                        android:hint="Selling Price"
+                        android:inputType="number"
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/_15ssp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvProductDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llPrices"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Product Description"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etProductDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvProductDescription"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_black"
+                    android:hint="Product Description"
+                    android:inputType="textMultiLine|textFilter"
+                    android:maxLines="5"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:id="@+id/tvProductQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etProductDescription"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Total Stock"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etProductQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvProductQuantity"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_black"
+                    android:hint="Total Stock Acquired"
+                    android:inputType="textMultiLine|textFilter"
+                    android:maxLines="5"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_15ssp" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etProductQuantity"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/color_blue_bg"
+                    android:text="Submit" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
     </RelativeLayout>
 

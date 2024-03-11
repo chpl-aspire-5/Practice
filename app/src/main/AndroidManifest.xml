@@ -26,9 +26,6 @@
             android:name=".New.BottomNavigationActivity"
             android:exported="false" />
         <activity
-            android:name=".SwipeButtonActivity2"
-            android:exported="false" />
-        <activity
             android:name=".SwipeButtonActivity"
             android:exported="false" />
         <activity

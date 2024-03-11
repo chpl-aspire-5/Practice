@@ -1,10 +1,11 @@
 package com.mycompany.practice.new1;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.mycompany.practice.R;
 import com.mycompany.practice.databinding.ActivityAddProductBinding;
@@ -25,6 +26,13 @@ public class AddProductActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        binding.btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AddProductActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
             }
         });
     }
