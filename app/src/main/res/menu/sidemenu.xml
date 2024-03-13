@@ -72,4 +72,8 @@
         android:id="@+id/imp1"
         android:title="Inventory" />
 
+    <item
+        android:id="@+id/qrCode"
+        android:title="QR Code Generator" />
+
 </menu>

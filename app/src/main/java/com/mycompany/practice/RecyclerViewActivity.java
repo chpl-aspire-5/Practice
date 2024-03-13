@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.mycompany.practice.databinding.ActivityRecyclerViewBinding;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     ActivityRecyclerViewBinding binding;
     ListAdapter listAdapter;
-    ImageView imgPrevious,imgNext,imgHome;
+    ImageView imgPrevious, imgNext, imgHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +66,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
         binding.swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-
                 binding.swipeRefresh.setRefreshing(false);
             }
         });
