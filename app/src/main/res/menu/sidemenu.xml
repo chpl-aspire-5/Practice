@@ -76,4 +76,8 @@
         android:id="@+id/qrCode"
         android:title="QR Code Generator" />
 
+    <item
+        android:id="@+id/colorPicker"
+        android:title="Color Picker" />
+
 </menu>

@@ -102,11 +102,14 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.imp) {
             startActivity(new Intent(this, BottomNavigationActivity.class));
             finish();
-        }else if (id == R.id.imp1) {
+        } else if (id == R.id.imp1) {
             startActivity(new Intent(this, InventoryActivity.class));
             finish();
-        }else if (id == R.id.qrCode) {
+        } else if (id == R.id.qrCode) {
             startActivity(new Intent(this, QrGeneratorActivity.class));
+            finish();
+        } else if (id == R.id.colorPicker) {
+            startActivity(new Intent(this, ColorPickerActivity.class));
             finish();
         }
 

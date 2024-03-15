@@ -93,8 +93,10 @@ dependencies {
 
     //QR Code Generator
     implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
-    //https://github.com/sathishmepco/QR-Code-Generator-Android-App/blob/master/app/build.gradle
     //https://github.com/sathishmepco/QR-Code-Scanner-Android-App
+
+    //Color Picker
+    implementation 'com.github.yukuku:ambilwarna:2.0.1'
 
     //Circular Dialog
     implementation 'com.github.hassanusman:CircularDialogs:1.2'
