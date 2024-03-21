@@ -37,7 +37,7 @@ public class AddCategoryFragment extends DialogFragment {
         Dialog dialog = getDialog();
         if (dialog != null) {
             Objects.requireNonNull(dialog.getWindow()).setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             Objects.requireNonNull(dialog.getWindow()).setGravity(Gravity.CENTER);
         }
     }
