@@ -32,7 +32,9 @@ public class AddProductActivity extends AppCompatActivity {
         binding.tvAddNewCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(AddProductActivity.this, "New Category", Toast.LENGTH_SHORT).show();
+                AddCategoryFragment addCategoryFragment = new AddCategoryFragment();
+                addCategoryFragment.setCancelable(false);
+                addCategoryFragment.show(getSupportFragmentManager(), "Category");
             }
         });
 
