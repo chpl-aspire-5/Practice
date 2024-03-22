@@ -98,6 +98,9 @@ dependencies {
     //Color Picker
     implementation 'com.github.yukuku:ambilwarna:2.0.1'
 
+    //Balloon
+    implementation 'com.github.skydoves:balloon:1.2.9'
+
     //Circular Dialog
     implementation 'com.github.hassanusman:CircularDialogs:1.2'
 
