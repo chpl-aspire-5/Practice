@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_40"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".HmapTrialActivity">
+
+        <EditText
+            android:id="@+id/etvHmapId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/border_black"
+            android:backgroundTint="@color/white"
+            android:digits="1234567890."
+            android:hint="Enter ID"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:textSize="@dimen/_20ssp" />
+
+        <EditText
+            android:id="@+id/etvHmapName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/border_black"
+            android:backgroundTint="@color/white"
+            android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+            android:hint="Enter Name"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:textSize="@dimen/_20ssp" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Add"
+            android:textSize="@dimen/_15ssp" />
+
+        <TextView
+            android:id="@+id/tvHashMapValves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/white"
+            android:hint="Hash Map Valves"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:textSize="@dimen/_17ssp" />
+
+    </LinearLayout>
+
+</layout>

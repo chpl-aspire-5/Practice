@@ -111,6 +111,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.colorPicker) {
             startActivity(new Intent(this, ColorPickerActivity.class));
             finish();
+        } else if (id == R.id.hmap) {
+            startActivity(new Intent(this, HmapTrialActivity.class));
+            finish();
         }
 
         return true;

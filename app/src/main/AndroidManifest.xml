@@ -17,6 +17,12 @@
         android:theme="@style/Theme.Practice"
         tools:targetApi="31">
         <activity
+            android:name=".HmapTrialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HashMapActivity"
+            android:exported="false" />
+        <activity
             android:name=".ColorPickerActivity"
             android:exported="false" />
         <activity
